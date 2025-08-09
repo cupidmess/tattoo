@@ -1979,7 +1979,15 @@ document.addEventListener("DOMContentLoaded", function () {
 												margin-top: 160rem; /* or padding-top: 20px; */
 											}
 										}
-										
+										@media not all and (min-resolution:.001dpcm) { 
+  @supports (-webkit-appearance:none) {
+    /* Safari-only CSS here */
+    #your-element {
+      margin-top: 60rem;
+    }
+  }
+}
+
 										
 									</style>
 									
