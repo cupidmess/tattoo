@@ -1990,6 +1990,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 										
 									</style>
+									<script>
+										// Detect Safari (desktop or iOS)
+										const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+									
+										// Check if screen width <= 768px (mobile/tablet)
+										const isMobile = window.innerWidth <= 768;
+									
+										if (isSafari && isMobile) {
+											const portfolioSection = document.getElementById('portfolio');
+											if (portfolioSection) {
+												portfolioSection.style.marginTop = '1.6rem'; // change as needed
+											}
+										}
+									</script>
 									
 							
 										<div class="edgtf-row-grid-section-wrapper edgtf-parallax-row-holder"
