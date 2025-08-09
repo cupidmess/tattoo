@@ -1,4 +1,4 @@
 # HTTrack Website Copier Cookie File
 # This file format is compatible with Netscape cookies
-haar.qodeinteractive.com	TRUE	/	FALSE	1999999999	woocommerce_recently_viewed	1464
+alligator-tattooz.vercel.app	TRUE	/	FALSE	1999999999	woocommerce_recently_viewed	1464
 
