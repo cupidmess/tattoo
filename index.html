@@ -3,6 +3,8 @@
 
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
+	<script src="script.js" defer></script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
 
@@ -791,6 +793,31 @@
 <body
 	class="home wp-singular page-template page-template-full-width page-template-full-width-php page page-id-27 wp-theme-haar theme-haar edgtf-core-1.1.1 woocommerce-no-js haar-ver-1.7 edgtf-grid-1300 edgtf-light-header edgtf-sticky-header-on-scroll-down-up edgtf-dropdown-animate-height edgtf-header-standard edgtf-menu-area-shadow-disable edgtf-menu-area-in-grid-shadow-disable edgtf-menu-area-border-disable edgtf-menu-area-in-grid-border-disable edgtf-logo-area-border-disable edgtf-header-vertical-shadow-disable edgtf-header-vertical-border-disable edgtf-side-menu-slide-from-right edgtf-woocommerce-columns-3 edgtf-woo-normal-space edgtf-woo-pl-info-below-image edgtf-woo-single-thumb-below-image edgtf-woo-single-has-pretty-photo edgtf-default-mobile-header edgtf-sticky-up-mobile-header edgtf-search-covers-header wpb-js-composer js-comp-ver-8.4.1 vc_responsive"
 	itemscope itemtype="http://schema.org/WebPage">
+	<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const tattooCards = document.querySelectorAll(".tattoo-card");
+
+  if (!filterButtons.length || !tattooCards.length) {
+    console.error("Filter buttons or cards not found");
+    return;
+  }
+
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const category = button.dataset.category;
+
+      tattooCards.forEach(card => {
+        card.style.display =
+          category === "all" || card.dataset.category === category
+            ? "block"
+            : "none";
+      });
+    });
+  });
+});
+</script>
+
 	<section class="edgtf-side-menu">
 		<div class="edgtf-close-side-menu-holder">
 			<a class="edgtf-close-side-menu edgtf-close-side-menu-icon-pack" href="#">
@@ -1619,8 +1646,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	</h4>
 			
 					<div class="edgtf-pli-category-holder">
-							<a itemprop="url" class="edgtf-pli-category"">Artistic</a>
-							<a itemprop="url" class="edgtf-pli-category"">Minimalist</a>
+							<a itemprop="url" class="edgtf-pli-category">Artistic</a>
+							<a itemprop="url" class="edgtf-pli-category">Minimalist</a>
 					</div>
 	
 						
@@ -1640,8 +1667,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	</h4>
 			
 					<div class="edgtf-pli-category-holder">
-							<a itemprop="url" class="edgtf-pli-category" ">Artistic</a>
-							<a itemprop="url" class="edgtf-pli-category" ">Religious</a>
+							<a itemprop="url" class="edgtf-pli-category">Artistic</a>
+							<a itemprop="url" class="edgtf-pli-category">Religious</a>
 					</div>
 	
 						
@@ -1706,7 +1733,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	</h4>
 			
 					<div class="edgtf-pli-category-holder">
-							<a itemprop="url">Artistic</a>
+							<a itemprop="url" class="edgtf-pli-category">Artistic</a>
 							<a itemprop="url" class="edgtf-pli-category">Mandala</a>
 					</div>
 	
@@ -1728,8 +1755,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	</h4>
 			
 					<div class="edgtf-pli-category-holder">
-							<a itemprop="url" >Artistic</a>
-							<a itemprop="url">Minimalist</a>
+							<a itemprop="url" class="edgtf-pli-category" >Artistic</a>
+							<a itemprop="url" class="edgtf-pli-category">Minimalist</a>
 					</div>
 	
 						
@@ -1751,7 +1778,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			
 					<div class="edgtf-pli-category-holder">
 							<a itemprop="url" class="edgtf-pli-category" >Artistic</a>
-							<a itemprop="url" class="edgtf-pli-category"">Religious</a>
+							<a itemprop="url" class="edgtf-pli-category">Religious</a>
 					</div>
 	
 						
